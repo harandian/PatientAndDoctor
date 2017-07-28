@@ -22,4 +22,10 @@
     return self;
 }
 
+- (NSString *) description {
+    
+    return self.doctorName;
+    
+}
+
 @end

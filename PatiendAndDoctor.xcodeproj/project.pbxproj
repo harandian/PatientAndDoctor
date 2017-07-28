@@ -11,6 +11,7 @@
 		72236A5E1F2A6A920065673C /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A5D1F2A6A920065673C /* Doctor.m */; };
 		72236A611F2A6C990065673C /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A601F2A6C990065673C /* Patient.m */; };
 		72236A671F2AC6260065673C /* Perscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A661F2AC6260065673C /* Perscription.m */; };
+		72236A6A1F2AD5E80065673C /* PerscriptionReg.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A691F2AD5E80065673C /* PerscriptionReg.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		72236A601F2A6C990065673C /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		72236A651F2AC6260065673C /* Perscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perscription.h; sourceTree = "<group>"; };
 		72236A661F2AC6260065673C /* Perscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perscription.m; sourceTree = "<group>"; };
+		72236A681F2AD5E80065673C /* PerscriptionReg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerscriptionReg.h; sourceTree = "<group>"; };
+		72236A691F2AD5E80065673C /* PerscriptionReg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerscriptionReg.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				72236A5D1F2A6A920065673C /* Doctor.m */,
 				72236A651F2AC6260065673C /* Perscription.h */,
 				72236A661F2AC6260065673C /* Perscription.m */,
+				72236A681F2AD5E80065673C /* PerscriptionReg.h */,
+				72236A691F2AD5E80065673C /* PerscriptionReg.m */,
 			);
 			path = PatiendAndDoctor;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72236A611F2A6C990065673C /* Patient.m in Sources */,
+				72236A6A1F2AD5E80065673C /* PerscriptionReg.m in Sources */,
 				72236A5E1F2A6A920065673C /* Doctor.m in Sources */,
 				72236A561F2A694E0065673C /* main.m in Sources */,
 				72236A671F2AC6260065673C /* Perscription.m in Sources */,

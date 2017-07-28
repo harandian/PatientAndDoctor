@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Patient.h"
 #import "Perscription.h"
+#import "PerscriptionReg.h"
 
 @interface Doctor : NSObject
 
@@ -17,11 +18,12 @@
 @property (nonatomic, strong) NSMutableSet *takenPatients;
 @property (nonatomic, assign) BOOL shouldTakePatient;
 @property (nonatomic, assign) NSDictionary *perscriptions;
+@property (nonatomic, weak) PerscriptionReg *persReg;
 
 
 - (instancetype)initWithNameDoctor: (NSString *) doctorName doctorSpecialization : (NSString *) doctorType; //costum initializer
 - (void)shoudItakePatient: (Patient *) patient; //bool that checks if patiend has health card.
-- (void)takePatient : (Patient *) patient; //adds patient to the takenpatients Set.
+//- (void)takePatient : (Patient *) patient; //adds patient to the takenpatients Set.
 - (NSString *)requestMedication : (Patient *) validPatient;
 
 

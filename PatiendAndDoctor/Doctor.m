@@ -29,20 +29,20 @@
     if (patient.hasHealthCard) {
         
         NSLog(@"Patient has health Card:");
-        self.shouldTakePatient = YES;
+       // self.shouldTakePatient = YES;
         [self.takenPatients addObject: patient];
         NSLog(@"%@",patient.patientName);
         
     } else {
         
-        self.shouldTakePatient = NO;
+       //  self.shouldTakePatient = NO;
         NSLog(@"You don't have a health card");
         
     }
     
 }
 
-- (Perscription *)requestMedication : (Patient *) validPatient {
+- (NSString *)requestMedication : (Patient *) validPatient {
     
     for (Patient *patient in self.takenPatients) {
         
@@ -51,18 +51,26 @@
             
             char doctorInput [255];
             
+            
+            NSLog(@"Please type your perscription %@",self.doctorName);
+            
             fgets(doctorInput, 255, stdin);
-            
-            // NSString *perscription =  [NSString stringWithUTF8String: doctorInput] stringByTrimmingCharactersInSet:
-            
+                        
             NSString *perscription = [[ NSString stringWithCString:doctorInput encoding: NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
             
             
             Perscription *newPex = [[Perscription alloc] initWithDoctorName:self.doctorName patientName: validPatient perscriptionText:perscription];
             
+            NSLog(@"The perscription is for %@, written by %@, and is perscribes %@", newPex.patientName, newPex.doctorName, newPex.perscriptionText);
+
+            if(self.persReg.mainPersRegist[validPatient.patientName]) {
+                [self.persReg.mainPersRegist[validPatient.patientName] addObject:newPex];
+            } else {
+                self.persReg.mainPersRegist[validPatient.patientName] = [[NSMutableArray alloc] initWithObjects:newPex, nil];
+            }
             
-            return newPex;
+            return newPex.perscriptionText;
         }
         
     }
@@ -70,6 +78,7 @@
     return nil;
     
 }
+
 
 
 

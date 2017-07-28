@@ -14,6 +14,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
+        
+        
         Doctor *doctor1 = [[Doctor alloc] initWithNameDoctor: @"John Doe" doctorSpecialization: @"Dentist"];
         NSLog(@"Hello doctor %@, I really need to see a %@ today!", doctor1.doctorName, doctor1.doctorType);
        
@@ -22,14 +24,26 @@ int main(int argc, const char * argv[]) {
         NSLog(@"My name is %@ and I am %ld years old", patient1.patientName, (long)patient1.patientAge);
         
         //Patient *patient2 = [[Patient alloc] initWithPatientName:@"HH" withPatientAge:33 hasHealthCard: NO];
-
+        
+        Doctor *doctor2 = [[Doctor alloc] initWithNameDoctor: @"Hirad Doe" doctorSpecialization: @"GP"];
+        PerscriptionReg *newReg = [[PerscriptionReg alloc] init];
         
         [patient1 visitDoctor: doctor1];
-       // [patient2 visitDoctor: doctor1];
+        [patient1 visitDoctor: doctor2];
         
-        [patient1  requestMedication:doctor1];
+        doctor1.persReg = newReg;
+        doctor2.persReg = newReg;
         
-        //NSLog(@"%@", )
+        NSLog(@"Your perscription is: %@",[patient1 requestMedication: doctor1]);
+        NSLog(@"Your perscription is: %@",[patient1 requestMedication: doctor2]);
+
+        
+        
+        NSLog(@"%@", newReg.mainPersRegist);
+    
+
+        
+//        NSLog(@"%@", )
     
         
     }
