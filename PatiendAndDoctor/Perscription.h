@@ -14,6 +14,8 @@
 @property NSString *doctorName;
 @property NSString *perscriptionText;
 
+
+
 - (instancetype)initWithDoctorName :()doctorName patientName: ()patientName perscriptionText: () perscriptionText;
 
 @end
