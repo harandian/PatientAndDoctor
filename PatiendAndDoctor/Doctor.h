@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Patient.h"
+#import "Perscription.h"
 
 @interface Doctor : NSObject
 

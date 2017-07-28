@@ -37,26 +37,38 @@
         
         self.shouldTakePatient = NO;
         NSLog(@"You don't have a health card");
-
+        
     }
     
 }
 
-- (NSString *)requestMedication : (Patient *) validPatient {
+- (Perscription *)requestMedication : (Patient *) validPatient {
     
     for (Patient *patient in self.takenPatients) {
         
         if (validPatient == patient) {
             
-            NSString *perscription = @"Take a chill pill";
             
-            return perscription;
+            char doctorInput [255];
+            
+            fgets(doctorInput, 255, stdin);
+            
+            // NSString *perscription =  [NSString stringWithUTF8String: doctorInput] stringByTrimmingCharactersInSet:
+            
+            NSString *perscription = [[ NSString stringWithCString:doctorInput encoding: NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            
+            
+            Perscription *newPex = [[Perscription alloc] initWithDoctorName:self.doctorName patientName: validPatient perscriptionText:perscription];
+            
+            
+            return newPex;
         }
         
     }
     
     return nil;
-
+    
 }
 
 
@@ -64,14 +76,14 @@
 //Method that checks if the patient has health card or not and tells doctor if they can be accepted or not.
 //
 //- (void)takePatient : (Patient *) patient {
-//    
-//    
+//
+//
 //    if (self.shouldTakePatient)
 //    {
 //        [self.takenPatients addObject: patient];
 //    NSLog(@"%@",self.takenPatients);
 //    }
-//    
+//
 //    NSLog(@"You don't have a health card");
 //}
 

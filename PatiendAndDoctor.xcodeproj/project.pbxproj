@@ -10,6 +10,7 @@
 		72236A561F2A694E0065673C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A551F2A694E0065673C /* main.m */; };
 		72236A5E1F2A6A920065673C /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A5D1F2A6A920065673C /* Doctor.m */; };
 		72236A611F2A6C990065673C /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A601F2A6C990065673C /* Patient.m */; };
+		72236A671F2AC6260065673C /* Perscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 72236A661F2AC6260065673C /* Perscription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		72236A5D1F2A6A920065673C /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		72236A5F1F2A6C990065673C /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		72236A601F2A6C990065673C /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		72236A651F2AC6260065673C /* Perscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perscription.h; sourceTree = "<group>"; };
+		72236A661F2AC6260065673C /* Perscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perscription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				72236A601F2A6C990065673C /* Patient.m */,
 				72236A5C1F2A6A920065673C /* Doctor.h */,
 				72236A5D1F2A6A920065673C /* Doctor.m */,
+				72236A651F2AC6260065673C /* Perscription.h */,
+				72236A661F2AC6260065673C /* Perscription.m */,
 			);
 			path = PatiendAndDoctor;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				72236A611F2A6C990065673C /* Patient.m in Sources */,
 				72236A5E1F2A6A920065673C /* Doctor.m in Sources */,
 				72236A561F2A694E0065673C /* main.m in Sources */,
+				72236A671F2AC6260065673C /* Perscription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
